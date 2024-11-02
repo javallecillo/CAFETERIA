@@ -25,7 +25,7 @@ namespace sisCafetería
             timer.Tick += Timer_Tick;
             timer.Start();
         }
-        //58888
+        
         private void Timer_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm tt");
@@ -101,6 +101,9 @@ namespace sisCafetería
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
+            abrirFormularios(new capaPresentacion.Pedidos());
+            lblTitulo.Text = "PEDIDOS";
+
             esconderSubmenu();
         }
 
