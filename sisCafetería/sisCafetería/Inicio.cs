@@ -25,7 +25,7 @@ namespace sisCafetería
             timer.Tick += Timer_Tick;
             timer.Start();
         }
-
+        //58888
         private void Timer_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm tt");
