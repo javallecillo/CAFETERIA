@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panelLateral = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -44,11 +45,18 @@
             this.panelImagen = new System.Windows.Forms.Panel();
             this.logoGF = new System.Windows.Forms.PictureBox();
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelFormularios = new System.Windows.Forms.Panel();
+            this.panelLogoTaza = new System.Windows.Forms.Panel();
+            this.logoTaza = new System.Windows.Forms.PictureBox();
+            this.lblHora = new System.Windows.Forms.Label();
             this.panelLateral.SuspendLayout();
             this.submenuIngredientes.SuspendLayout();
             this.panelImagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoGF)).BeginInit();
+            this.panelSuperior.SuspendLayout();
+            this.panelLogoTaza.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoTaza)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLateral
@@ -66,8 +74,9 @@
             this.panelLateral.Controls.Add(this.panelImagen);
             this.panelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelLateral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLateral.Name = "panelLateral";
-            this.panelLateral.Size = new System.Drawing.Size(269, 1033);
+            this.panelLateral.Size = new System.Drawing.Size(269, 846);
             this.panelLateral.TabIndex = 0;
             this.panelLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLateral_Paint);
             // 
@@ -81,7 +90,8 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 983);
+            this.btnSalir.Location = new System.Drawing.Point(0, 796);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(269, 50);
@@ -89,6 +99,7 @@
             this.btnSalir.Text = "SALIR";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnUsuarios
             // 
@@ -101,6 +112,7 @@
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 583);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(269, 50);
@@ -108,6 +120,7 @@
             this.btnUsuarios.Text = "USUARIOS";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnReportes
             // 
@@ -120,6 +133,7 @@
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Location = new System.Drawing.Point(0, 533);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(269, 50);
@@ -127,6 +141,7 @@
             this.btnReportes.Text = "REPORTES";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // submenuIngredientes
             // 
@@ -136,6 +151,7 @@
             this.submenuIngredientes.Controls.Add(this.btnStock);
             this.submenuIngredientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenuIngredientes.Location = new System.Drawing.Point(0, 350);
+            this.submenuIngredientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submenuIngredientes.Name = "submenuIngredientes";
             this.submenuIngredientes.Size = new System.Drawing.Size(269, 183);
             this.submenuIngredientes.TabIndex = 7;
@@ -148,6 +164,7 @@
             this.btnSalidas.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnSalidas.ForeColor = System.Drawing.Color.White;
             this.btnSalidas.Location = new System.Drawing.Point(0, 120);
+            this.btnSalidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalidas.Name = "btnSalidas";
             this.btnSalidas.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnSalidas.Size = new System.Drawing.Size(269, 60);
@@ -164,6 +181,7 @@
             this.btnEntradas.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnEntradas.ForeColor = System.Drawing.Color.White;
             this.btnEntradas.Location = new System.Drawing.Point(0, 60);
+            this.btnEntradas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEntradas.Name = "btnEntradas";
             this.btnEntradas.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnEntradas.Size = new System.Drawing.Size(269, 60);
@@ -180,6 +198,7 @@
             this.btnStock.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnStock.ForeColor = System.Drawing.Color.White;
             this.btnStock.Location = new System.Drawing.Point(0, 0);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStock.Name = "btnStock";
             this.btnStock.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnStock.Size = new System.Drawing.Size(269, 60);
@@ -199,6 +218,7 @@
             this.btnIngredientes.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnIngredientes.ForeColor = System.Drawing.Color.White;
             this.btnIngredientes.Location = new System.Drawing.Point(0, 300);
+            this.btnIngredientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngredientes.Name = "btnIngredientes";
             this.btnIngredientes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnIngredientes.Size = new System.Drawing.Size(269, 50);
@@ -206,6 +226,7 @@
             this.btnIngredientes.Text = "INGREDIENTES";
             this.btnIngredientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIngredientes.UseVisualStyleBackColor = true;
+            this.btnIngredientes.Click += new System.EventHandler(this.btnIngredientes_Click);
             // 
             // btnCategorias
             // 
@@ -218,6 +239,7 @@
             this.btnCategorias.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnCategorias.ForeColor = System.Drawing.Color.White;
             this.btnCategorias.Location = new System.Drawing.Point(0, 250);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnCategorias.Size = new System.Drawing.Size(269, 50);
@@ -225,6 +247,7 @@
             this.btnCategorias.Text = "CATEGORIAS";
             this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnProductos
             // 
@@ -237,6 +260,7 @@
             this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Location = new System.Drawing.Point(0, 200);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnProductos.Size = new System.Drawing.Size(269, 50);
@@ -244,6 +268,7 @@
             this.btnProductos.Text = "PRODUCTOS";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnPedidos
             // 
@@ -256,6 +281,7 @@
             this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnPedidos.ForeColor = System.Drawing.Color.White;
             this.btnPedidos.Location = new System.Drawing.Point(0, 150);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnPedidos.Size = new System.Drawing.Size(269, 50);
@@ -263,6 +289,7 @@
             this.btnPedidos.Text = "PEDIDOS";
             this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnInicio
             // 
@@ -275,6 +302,7 @@
             this.btnInicio.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnInicio.ForeColor = System.Drawing.Color.White;
             this.btnInicio.Location = new System.Drawing.Point(0, 100);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnInicio.Size = new System.Drawing.Size(269, 50);
@@ -282,18 +310,21 @@
             this.btnInicio.Text = "INICIO";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // panelImagen
             // 
             this.panelImagen.Controls.Add(this.logoGF);
             this.panelImagen.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelImagen.Location = new System.Drawing.Point(0, 0);
+            this.panelImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelImagen.Name = "panelImagen";
             this.panelImagen.Size = new System.Drawing.Size(269, 100);
             this.panelImagen.TabIndex = 0;
             // 
             // logoGF
             // 
+            this.logoGF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoGF.Image = global::sisCafetería.Properties.Resources.LOGO_Galerias_Cafe_PALABRA;
             this.logoGF.Location = new System.Drawing.Point(0, 0);
             this.logoGF.Name = "logoGF";
@@ -304,38 +335,92 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.panelSuperior.Controls.Add(this.lblHora);
+            this.panelSuperior.Controls.Add(this.panelLogoTaza);
+            this.panelSuperior.Controls.Add(this.lblTitulo);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(269, 0);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1633, 100);
+            this.panelSuperior.Size = new System.Drawing.Size(1632, 100);
             this.panelSuperior.TabIndex = 1;
             // 
-            // panel2
+            // lblTitulo
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(269, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1633, 933);
-            this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(26, 32);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(209, 37);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "¡BIENVENIDO!";
+            // 
+            // panelFormularios
+            // 
+            this.panelFormularios.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormularios.Location = new System.Drawing.Point(269, 100);
+            this.panelFormularios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelFormularios.Name = "panelFormularios";
+            this.panelFormularios.Size = new System.Drawing.Size(1632, 746);
+            this.panelFormularios.TabIndex = 2;
+            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panelLogoTaza
+            // 
+            this.panelLogoTaza.Controls.Add(this.logoTaza);
+            this.panelLogoTaza.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelLogoTaza.Location = new System.Drawing.Point(1522, 0);
+            this.panelLogoTaza.Name = "panelLogoTaza";
+            this.panelLogoTaza.Size = new System.Drawing.Size(110, 100);
+            this.panelLogoTaza.TabIndex = 1;
+            // 
+            // logoTaza
+            // 
+            this.logoTaza.Dock = System.Windows.Forms.DockStyle.Right;
+            this.logoTaza.Image = global::sisCafetería.Properties.Resources.LOGO_Galerias_Cafe_TAZA;
+            this.logoTaza.Location = new System.Drawing.Point(10, 0);
+            this.logoTaza.Name = "logoTaza";
+            this.logoTaza.Size = new System.Drawing.Size(100, 100);
+            this.logoTaza.TabIndex = 0;
+            this.logoTaza.TabStop = false;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(1343, 32);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(173, 37);
+            this.lblHora.TabIndex = 2;
+            this.lblHora.Text = "00:00 a. m.";
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1901, 846);
+            this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelLateral);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GALERIA CAFE";
+            this.TransparencyKey = System.Drawing.Color.Purple;
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.panelLateral.ResumeLayout(false);
             this.submenuIngredientes.ResumeLayout(false);
             this.panelImagen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoGF)).EndInit();
+            this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
+            this.panelLogoTaza.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoTaza)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,7 +430,7 @@
         private System.Windows.Forms.Panel panelLateral;
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Panel panelImagen;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelFormularios;
         private System.Windows.Forms.PictureBox logoGF;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button btnProductos;
@@ -359,5 +444,9 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel panelLogoTaza;
+        private System.Windows.Forms.PictureBox logoTaza;
+        private System.Windows.Forms.Label lblHora;
     }
 }

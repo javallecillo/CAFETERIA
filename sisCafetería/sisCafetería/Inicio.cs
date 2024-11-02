@@ -12,12 +12,46 @@ namespace sisCafetería
 {
     public partial class Inicio : Form
     {
+        private System.Windows.Forms.Timer timer;
+
         public Inicio()
         {
             InitializeComponent();
+            customizarDisenio();
+            abrirFormularios(new capaPresentacion.Inicio());
+
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 
-        private void custo
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm tt");
+        }
+
+        private void customizarDisenio()
+        {
+            submenuIngredientes.Visible = false;
+        }
+
+        private void esconderSubmenu()
+        {
+            if (submenuIngredientes.Visible == true)
+                submenuIngredientes.Visible = false;
+        }
+
+        private void mostrarSubmenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                esconderSubmenu();
+                submenu.Visible = true;
+            }
+            else
+                submenu.Visible = false;
+        }
 
         private void panelLateral_Paint(object sender, PaintEventArgs e)
         {
@@ -33,5 +67,68 @@ namespace sisCafetería
         {
 
         }
+
+        private Form formularioActivo = null;
+        private void abrirFormularios(Form Formulario)
+        {
+            if (formularioActivo != null)
+                formularioActivo.Close();
+
+            formularioActivo = Formulario;
+            Formulario.TopLevel = false;
+            Formulario.FormBorderStyle= FormBorderStyle.None;
+            Formulario.Dock = DockStyle.Fill;
+            panelFormularios.Controls. Add(Formulario);
+            panelFormularios.Tag = Formulario;
+            Formulario.BringToFront();
+            Formulario.Show();
+
+        }
+
+        private void btnIngredientes_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenu(submenuIngredientes);
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            abrirFormularios(new capaPresentacion.Inicio());
+            lblTitulo.Text = "¡BIENVENIDO!";
+
+            // COLOCAR ESTE COMANDO A TODOS LOS BOTONES PARA ESCONDER EL SUBMENU DE INGREDIENTES
+            esconderSubmenu();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            esconderSubmenu();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            esconderSubmenu();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            esconderSubmenu();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            esconderSubmenu();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            esconderSubmenu();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
