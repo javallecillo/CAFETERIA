@@ -63,6 +63,16 @@ namespace sisCafetería.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _ {
+            get {
+                object obj = ResourceManager.GetObject("-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGO_Galerias_Cafe_PALABRA {
             get {
                 object obj = ResourceManager.GetObject("LOGO_Galerias_Cafe_PALABRA", resourceCulture);
@@ -106,6 +116,16 @@ namespace sisCafetería.Properties {
         internal static System.Drawing.Bitmap LOGO_Galerias_Cafe_V4 {
             get {
                 object obj = ResourceManager.GetObject("LOGO_Galerias_Cafe_V4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x {
+            get {
+                object obj = ResourceManager.GetObject("x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

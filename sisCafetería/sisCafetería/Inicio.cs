@@ -129,9 +129,46 @@ namespace sisCafetería
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+
+                Form loginForm = new capaPresentacion.Login();
+                loginForm.Show();
+
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //LLAMAR AL FORMULARIO DE LOGIN EN VEZ DE CERRAR
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void panelSuperior_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

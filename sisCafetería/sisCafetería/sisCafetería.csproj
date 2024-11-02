@@ -52,6 +52,12 @@
     <Compile Include="capaPresentacion\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="capaPresentacion\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="capaPresentacion\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="capaPresentacion\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
@@ -116,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="capaPresentacion\img\LOGO_Galerias_Cafe_TAZABK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="capaPresentacion\img\-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="capaPresentacion\img\x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

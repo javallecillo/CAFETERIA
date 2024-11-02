@@ -45,18 +45,18 @@
             this.panelImagen = new System.Windows.Forms.Panel();
             this.logoGF = new System.Windows.Forms.PictureBox();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.panelLogoTaza = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.panelLogoTaza = new System.Windows.Forms.Panel();
-            this.logoTaza = new System.Windows.Forms.PictureBox();
-            this.lblHora = new System.Windows.Forms.Label();
             this.panelLateral.SuspendLayout();
             this.submenuIngredientes.SuspendLayout();
             this.panelImagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoGF)).BeginInit();
             this.panelSuperior.SuspendLayout();
             this.panelLogoTaza.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoTaza)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLateral
@@ -335,22 +335,72 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            this.panelSuperior.Controls.Add(this.lblHora);
             this.panelSuperior.Controls.Add(this.panelLogoTaza);
             this.panelSuperior.Controls.Add(this.lblTitulo);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(269, 0);
             this.panelSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1632, 100);
+            this.panelSuperior.Size = new System.Drawing.Size(1632, 120);
             this.panelSuperior.TabIndex = 1;
+            this.panelSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSuperior_Paint);
+            // 
+            // panelLogoTaza
+            // 
+            this.panelLogoTaza.Controls.Add(this.lblHora);
+            this.panelLogoTaza.Controls.Add(this.btnMin);
+            this.panelLogoTaza.Controls.Add(this.btnCerrar);
+            this.panelLogoTaza.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelLogoTaza.Location = new System.Drawing.Point(1443, 0);
+            this.panelLogoTaza.Name = "panelLogoTaza";
+            this.panelLogoTaza.Size = new System.Drawing.Size(189, 120);
+            this.panelLogoTaza.TabIndex = 1;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(4, 63);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(173, 37);
+            this.lblHora.TabIndex = 2;
+            this.lblHora.Text = "00:00 a. m.";
+            // 
+            // btnMin
+            // 
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
+            this.btnMin.Location = new System.Drawing.Point(92, 0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(50, 50);
+            this.btnMin.TabIndex = 1;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(139, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(50, 50);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(26, 32);
+            this.lblTitulo.Location = new System.Drawing.Point(32, 63);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(209, 37);
             this.lblTitulo.TabIndex = 0;
@@ -359,43 +409,12 @@
             // panelFormularios
             // 
             this.panelFormularios.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormularios.Location = new System.Drawing.Point(269, 100);
+            this.panelFormularios.Location = new System.Drawing.Point(269, 120);
             this.panelFormularios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(1632, 746);
+            this.panelFormularios.Size = new System.Drawing.Size(1597, 682);
             this.panelFormularios.TabIndex = 2;
             this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panelLogoTaza
-            // 
-            this.panelLogoTaza.Controls.Add(this.logoTaza);
-            this.panelLogoTaza.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLogoTaza.Location = new System.Drawing.Point(1522, 0);
-            this.panelLogoTaza.Name = "panelLogoTaza";
-            this.panelLogoTaza.Size = new System.Drawing.Size(110, 100);
-            this.panelLogoTaza.TabIndex = 1;
-            // 
-            // logoTaza
-            // 
-            this.logoTaza.Dock = System.Windows.Forms.DockStyle.Right;
-            this.logoTaza.Image = global::sisCafetería.Properties.Resources.LOGO_Galerias_Cafe_TAZA;
-            this.logoTaza.Location = new System.Drawing.Point(10, 0);
-            this.logoTaza.Name = "logoTaza";
-            this.logoTaza.Size = new System.Drawing.Size(100, 100);
-            this.logoTaza.TabIndex = 0;
-            this.logoTaza.TabStop = false;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(1343, 32);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(173, 37);
-            this.lblHora.TabIndex = 2;
-            this.lblHora.Text = "00:00 a. m.";
             // 
             // Inicio
             // 
@@ -406,6 +425,7 @@
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelLateral);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Inicio";
@@ -420,7 +440,7 @@
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             this.panelLogoTaza.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoTaza)).EndInit();
+            this.panelLogoTaza.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -446,7 +466,8 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panelLogoTaza;
-        private System.Windows.Forms.PictureBox logoTaza;
         private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnMin;
     }
 }
