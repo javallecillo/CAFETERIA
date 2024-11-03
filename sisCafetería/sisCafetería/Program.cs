@@ -16,7 +16,16 @@ namespace sisCafetería
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            //Application.Run(new Inicio());
+
+            
+            capaPresentacion.Login loginForm = new capaPresentacion.Login();
+
+            
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Inicio());
+            }
         }
     }
 }

@@ -132,5 +132,11 @@
   <ItemGroup>
     <None Include="capaPresentacion\img\x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="capaPresentacion\img\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="capaPresentacion\img\tachado.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

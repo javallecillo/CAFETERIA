@@ -153,6 +153,11 @@ namespace sisCafetería
             if (result == DialogResult.Yes)
             {
                 //LLAMAR AL FORMULARIO DE LOGIN EN VEZ DE CERRAR
+                this.Hide();
+
+                Form loginForm = new capaPresentacion.Login();
+                loginForm.Show();
+
                 this.Close();
             }
             else
