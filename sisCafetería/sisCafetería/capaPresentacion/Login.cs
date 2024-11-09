@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sisCafetería.capaDatos;
+using sisCafetería.capaLogica;
 
 namespace sisCafetería.capaPresentacion
 {
@@ -15,6 +17,7 @@ namespace sisCafetería.capaPresentacion
         public Login()
         {
             InitializeComponent();
+            lblMsg.Text = "";
 
             // Configura los placeholders y sus eventos una vez
             InitializePlaceholders();
@@ -117,6 +120,40 @@ namespace sisCafetería.capaPresentacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string usuario = txtUsuario.Text;
+                string contrasenia = txtContrasenia.Text;
+
+                UsuariosCD usuariosCD = new UsuariosCD();
+
+                if (usuariosCD.ValidarUsuario(usuario, contrasenia))
+                {
+                    lblMsg.Text = "";
+                    imgAdvertencia.Visible = false;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    lblMsg.Text = "Usuario o contraseña incorrectos.";
+                    imgAdvertencia.Visible= true;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = $"Ha ocurrido un error: {ex.Message}";
+                imgAdvertencia.Visible= true;
+            }
+        }
+
+        private void lblMsg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

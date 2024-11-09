@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sisCafetería.capaPresentacion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,16 +17,17 @@ namespace sisCafetería
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Inicio());
+            Application.Run(new Inicio());
 
-            
-            capaPresentacion.Login loginForm = new capaPresentacion.Login();
+            /*
+            Inicio inicioForm = new Inicio();
+            Login loginForm = new Login();
 
-            
+
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new Inicio());
-            }
+                Application.Run(inicioForm);
+            }*/
         }
     }
 }

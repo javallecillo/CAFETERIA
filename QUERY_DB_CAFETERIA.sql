@@ -16,10 +16,13 @@ CREATE TABLE Ingredientes (
 
 CREATE TABLE Usuarios (
     IdUsuario INT PRIMARY KEY IDENTITY(1,1),
-    Nombre VARCHAR(100) NOT NULL,
-    Contraseña VARCHAR(255) NOT NULL,
+    Usuario VARCHAR(100) NOT NULL,
+    Contrasenia VARCHAR(255) NOT NULL,
     Rol VARCHAR(20) NOT NULL CHECK (Rol IN ('Empleado', 'Administrador'))
 );
+
+INSERT INTO Usuarios (Usuario, Contrasenia, Rol) VALUES ('admin', 'admin', 'Administrador');
+
 
 CREATE TABLE Productos (
     IdProducto INT PRIMARY KEY IDENTITY(1,1),

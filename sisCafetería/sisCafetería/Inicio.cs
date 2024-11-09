@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sisCafetería.capaPresentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -124,26 +125,30 @@ namespace sisCafetería
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            abrirFormularios(new capaPresentacion.Usuarios());
+            lblTitulo.Text = "USUARIOS";
             esconderSubmenu();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            /*DialogResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
                 this.Hide();
 
-                Form loginForm = new capaPresentacion.Login();
-                loginForm.Show();
+                Login loginForm = new Login();
 
-                this.Close();
-            }
-            else
-            {
-
-            }
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+                else
+                {*/
+                    this.Close();/*
+                }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -152,17 +157,18 @@ namespace sisCafetería
 
             if (result == DialogResult.Yes)
             {
-                //LLAMAR AL FORMULARIO DE LOGIN EN VEZ DE CERRAR
                 this.Hide();
 
-                Form loginForm = new capaPresentacion.Login();
-                loginForm.Show();
+                Login loginForm = new Login();
 
-                this.Close();
-            }
-            else
-            {
-
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
 
@@ -174,6 +180,11 @@ namespace sisCafetería
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnSalidas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
