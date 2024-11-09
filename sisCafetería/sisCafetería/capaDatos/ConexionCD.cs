@@ -20,30 +20,51 @@ namespace sisCafetería.capaDatos
             return this.Conexion;
         }
 
-        // Método para ejecutar comandos sin retorno de datos
-        public bool EjecutarComandoSinRetornoDatos(string strComando)
+        // INSERT, UPDATE, DELETE
+        public bool ejecutarComandoSinRetornoDatos(string strComando)
         {
             try
             {
-                using (SqlCommand Comando = new SqlCommand(strComando, EstablecerConexion()))
-                {
-                    Conexion.Open();
-                    Comando.ExecuteNonQuery();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                return false;
-            }
-            finally
-            {
+                SqlCommand Comando = new SqlCommand();
+
+                Comando.CommandText = strComando;
+                Comando.Connection = this.EstablecerConexion();
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
                 Conexion.Close();
+
+                return true;
+
+            }
+            catch
+            {
+
+                return false;
             }
         }
 
-        // Método para ejecutar comandos SQL que devuelven datos
+        //Sobrecarga
+        public bool ejecutarComandoSinRetornoDatos(SqlCommand SQLComando)
+        {
+            try
+            {
+                SqlCommand Comando = SQLComando;
+                Comando.Connection = this.EstablecerConexion();
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+
+                return true;
+
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+                return false;
+            }
+        }
+
+        //SELECT 
         public DataSet EjecutarSentencia(SqlCommand sqlComando)
         {
             DataSet DS = new DataSet();
@@ -51,20 +72,20 @@ namespace sisCafetería.capaDatos
 
             try
             {
-                sqlComando.Connection = EstablecerConexion();
-                Adaptador.SelectCommand = sqlComando;
+                SqlCommand Comando = new SqlCommand();
+                Comando = sqlComando;
+                Comando.Connection = EstablecerConexion();
+                Adaptador.SelectCommand = Comando;
                 Conexion.Open();
                 Adaptador.Fill(DS);
-                return DS;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                return DS;
-            }
-            finally
-            {
                 Conexion.Close();
+
+                return DS;
+
+            }
+            catch
+            {
+                return DS;
             }
         }
     }

@@ -17,9 +17,9 @@ namespace sisCafetería
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            //Application.Run(new Inicio());
 
-            /*
+            
             Inicio inicioForm = new Inicio();
             Login loginForm = new Login();
 
@@ -27,7 +27,7 @@ namespace sisCafetería
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(inicioForm);
-            }*/
+            }
         }
     }
 }

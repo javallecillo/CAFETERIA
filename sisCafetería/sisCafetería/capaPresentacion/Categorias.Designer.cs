@@ -1,6 +1,6 @@
 ﻿namespace sisCafetería.capaPresentacion
 {
-    partial class Usuarios
+    partial class Categorias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,65 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelUsuarios = new System.Windows.Forms.Panel();
-            this.dataUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.panelCategorias = new System.Windows.Forms.Panel();
+            this.dataCategorias = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cmbRol = new System.Windows.Forms.ComboBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataUsuarios)).BeginInit();
+            this.panelCategorias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCategorias)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelUsuarios
+            // panelCategorias
             // 
-            this.panelUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
-            this.panelUsuarios.Controls.Add(this.dataUsuarios);
-            this.panelUsuarios.Controls.Add(this.btnBuscar);
-            this.panelUsuarios.Controls.Add(this.txtBuscar);
-            this.panelUsuarios.Controls.Add(this.label5);
-            this.panelUsuarios.Controls.Add(this.btnCancelar);
-            this.panelUsuarios.Controls.Add(this.btnEliminar);
-            this.panelUsuarios.Controls.Add(this.btnEditar);
-            this.panelUsuarios.Controls.Add(this.btnAgregar);
-            this.panelUsuarios.Controls.Add(this.cmbRol);
-            this.panelUsuarios.Controls.Add(this.txtUsuario);
-            this.panelUsuarios.Controls.Add(this.txtContrasenia);
-            this.panelUsuarios.Controls.Add(this.txtId);
-            this.panelUsuarios.Controls.Add(this.label4);
-            this.panelUsuarios.Controls.Add(this.label3);
-            this.panelUsuarios.Controls.Add(this.label2);
-            this.panelUsuarios.Controls.Add(this.label1);
-            this.panelUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.panelUsuarios.Margin = new System.Windows.Forms.Padding(2);
-            this.panelUsuarios.Name = "panelUsuarios";
-            this.panelUsuarios.Size = new System.Drawing.Size(1167, 568);
-            this.panelUsuarios.TabIndex = 0;
+            this.panelCategorias.Controls.Add(this.dataCategorias);
+            this.panelCategorias.Controls.Add(this.txtBuscar);
+            this.panelCategorias.Controls.Add(this.label5);
+            this.panelCategorias.Controls.Add(this.btnBuscar);
+            this.panelCategorias.Controls.Add(this.btnCancelar);
+            this.panelCategorias.Controls.Add(this.btnEliminar);
+            this.panelCategorias.Controls.Add(this.btnEditar);
+            this.panelCategorias.Controls.Add(this.btnAgregar);
+            this.panelCategorias.Controls.Add(this.txtDescripcion);
+            this.panelCategorias.Controls.Add(this.txtNombre);
+            this.panelCategorias.Controls.Add(this.txtId);
+            this.panelCategorias.Controls.Add(this.label4);
+            this.panelCategorias.Controls.Add(this.label3);
+            this.panelCategorias.Controls.Add(this.label1);
+            this.panelCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCategorias.Location = new System.Drawing.Point(0, 0);
+            this.panelCategorias.Name = "panelCategorias";
+            this.panelCategorias.Size = new System.Drawing.Size(1151, 529);
+            this.panelCategorias.TabIndex = 0;
             // 
-            // dataUsuarios
+            // dataCategorias
             // 
-            this.dataUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataUsuarios.Location = new System.Drawing.Point(26, 223);
-            this.dataUsuarios.Margin = new System.Windows.Forms.Padding(2);
-            this.dataUsuarios.Name = "dataUsuarios";
-            this.dataUsuarios.RowHeadersWidth = 51;
-            this.dataUsuarios.RowTemplate.Height = 24;
-            this.dataUsuarios.Size = new System.Drawing.Size(775, 315);
-            this.dataUsuarios.TabIndex = 61;
-            this.dataUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar);
+            this.dataCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCategorias.Location = new System.Drawing.Point(26, 223);
+            this.dataCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.dataCategorias.Name = "dataCategorias";
+            this.dataCategorias.RowHeadersWidth = 51;
+            this.dataCategorias.RowTemplate.Height = 24;
+            this.dataCategorias.Size = new System.Drawing.Size(775, 315);
+            this.dataCategorias.TabIndex = 68;
+            this.dataCategorias.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataCategorias_MouseClick);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscar.Location = new System.Drawing.Point(164, 180);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(471, 25);
+            this.txtBuscar.TabIndex = 67;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.Location = new System.Drawing.Point(22, 182);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 19);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Buscar por nombre:";
             // 
             // btnBuscar
             // 
@@ -99,33 +115,10 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(161, 29);
-            this.btnBuscar.TabIndex = 60;
+            this.btnBuscar.TabIndex = 65;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.White;
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.Location = new System.Drawing.Point(164, 180);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(471, 25);
-            this.txtBuscar.TabIndex = 59;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label5.Location = new System.Drawing.Point(22, 182);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 19);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Buscar por usuario:";
             // 
             // btnCancelar
             // 
@@ -138,7 +131,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(161, 29);
-            this.btnCancelar.TabIndex = 57;
+            this.btnCancelar.TabIndex = 64;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -154,7 +147,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(161, 29);
-            this.btnEliminar.TabIndex = 56;
+            this.btnEliminar.TabIndex = 63;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -170,7 +163,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(161, 29);
-            this.btnEditar.TabIndex = 55;
+            this.btnEditar.TabIndex = 62;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -186,54 +179,37 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(161, 29);
-            this.btnAgregar.TabIndex = 54;
+            this.btnAgregar.TabIndex = 61;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // cmbRol
+            // txtDescripcion
             // 
-            this.cmbRol.BackColor = System.Drawing.Color.White;
-            this.cmbRol.Enabled = false;
-            this.cmbRol.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmbRol.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbRol.ForeColor = System.Drawing.Color.Black;
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Items.AddRange(new object[] {
-            "Empleado",
-            "Administrador"});
-            this.cmbRol.Location = new System.Drawing.Point(532, 84);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(270, 25);
-            this.cmbRol.TabIndex = 53;
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.txtDescripcion.Location = new System.Drawing.Point(532, 27);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(269, 82);
+            this.txtDescripcion.TabIndex = 57;
             // 
-            // txtUsuario
+            // txtNombre
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.White;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Enabled = false;
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuario.Location = new System.Drawing.Point(532, 27);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(269, 25);
-            this.txtUsuario.TabIndex = 52;
-            // 
-            // txtContrasenia
-            // 
-            this.txtContrasenia.BackColor = System.Drawing.Color.White;
-            this.txtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContrasenia.Enabled = false;
-            this.txtContrasenia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtContrasenia.ForeColor = System.Drawing.Color.Black;
-            this.txtContrasenia.Location = new System.Drawing.Point(138, 84);
-            this.txtContrasenia.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.Size = new System.Drawing.Size(269, 25);
-            this.txtContrasenia.TabIndex = 51;
-            this.txtContrasenia.TextChanged += new System.EventHandler(this.txtContrasenia_TextChanged);
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.Location = new System.Drawing.Point(138, 84);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(269, 25);
+            this.txtNombre.TabIndex = 56;
             // 
             // txtId
             // 
@@ -247,7 +223,7 @@
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(269, 25);
-            this.txtId.TabIndex = 50;
+            this.txtId.TabIndex = 55;
             // 
             // label4
             // 
@@ -256,9 +232,9 @@
             this.label4.Location = new System.Drawing.Point(22, 85);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Contraseña:";
+            this.label4.Size = new System.Drawing.Size(62, 19);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Nombre:";
             // 
             // label3
             // 
@@ -267,20 +243,9 @@
             this.label3.Location = new System.Drawing.Point(448, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Usuario:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label2.Location = new System.Drawing.Point(448, 85);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Rol:";
+            this.label3.Size = new System.Drawing.Size(82, 19);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Descripción:";
             // 
             // label1
             // 
@@ -290,44 +255,41 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 19);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 51;
             this.label1.Text = "ID:";
             // 
-            // Usuarios
+            // Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 568);
-            this.Controls.Add(this.panelUsuarios);
+            this.ClientSize = new System.Drawing.Size(1151, 529);
+            this.Controls.Add(this.panelCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Usuarios";
-            this.Text = "Usuarios";
-            this.panelUsuarios.ResumeLayout(false);
-            this.panelUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataUsuarios)).EndInit();
+            this.Name = "Categorias";
+            this.Text = "Categorias";
+            this.panelCategorias.ResumeLayout(false);
+            this.panelCategorias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCategorias)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelUsuarios;
+        private System.Windows.Forms.Panel panelCategorias;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.ComboBox cmbRol;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataUsuarios;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dataCategorias;
     }
 }

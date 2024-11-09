@@ -46,9 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="capaDatos\CategoriasCD.cs" />
     <Compile Include="capaDatos\ConexionCD.cs" />
     <Compile Include="capaDatos\UsuariosCD.cs" />
+    <Compile Include="capaLogica\CategoriasCL.cs" />
     <Compile Include="capaLogica\UsuariosCL.cs" />
+    <Compile Include="capaPresentacion\Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="capaPresentacion\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="capaPresentacion\Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>

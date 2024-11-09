@@ -11,12 +11,10 @@ namespace sisCafetería.capaLogica
     {
         private readonly UsuariosCD usuariosCD = new UsuariosCD();
 
-        public int Id { get; set; }
+        public int IdUsuario { get; set; }
         public string Usuario { get; set; }
         public string Contrasenia { get; set; }
-        public string Nombre { get; set; }
         public string Rol { get; set; }
-        public bool Activo { get; set; }
 
         public bool ValidarUsuario(string usuario, string contrasenia)
         {

@@ -115,6 +115,8 @@ namespace sisCafetería
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
+            abrirFormularios(new capaPresentacion.Categorias());
+            lblTitulo.Text = "CATEGORIAS";
             esconderSubmenu();
         }
 
@@ -132,7 +134,7 @@ namespace sisCafetería
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            /*DialogResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
@@ -145,10 +147,10 @@ namespace sisCafetería
                     this.Show();
                 }
                 else
-                {*/
-                    this.Close();/*
+                {
+                    this.Close();
                 }
-            }*/
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
