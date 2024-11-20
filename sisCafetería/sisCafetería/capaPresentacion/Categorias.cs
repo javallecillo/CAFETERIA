@@ -188,10 +188,5 @@ namespace sisCafetería.capaPresentacion
                 MessageBox.Show("Por favor, ingrese un nombre para buscar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void dataCategorias_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
     }
 }

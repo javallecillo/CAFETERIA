@@ -135,6 +135,7 @@ namespace sisCafetería.capaPresentacion
                 {
                     lblMsg.Text = "";
                     imgAdvertencia.Visible = false;
+
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

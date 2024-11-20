@@ -1,3 +1,4 @@
+
 use db_cafeteria
 
 CREATE TABLE Categorias (
@@ -9,7 +10,6 @@ CREATE TABLE Categorias (
 CREATE TABLE Ingredientes (
     IdIngrediente INT PRIMARY KEY IDENTITY(1,1),
     Nombre VARCHAR(100) NOT NULL,
-    CantidadDisponible INT NOT NULL DEFAULT 0,
     UnidadMedida VARCHAR(50) NOT NULL,
     PrecioUnitario DECIMAL(10, 2) NOT NULL
 );
@@ -30,9 +30,12 @@ CREATE TABLE Productos (
     IdCategoria INT NOT NULL,
     Precio DECIMAL(10, 2) NOT NULL,
     Descripcion VARCHAR(MAX) NULL,
-    Stock INT NOT NULL DEFAULT 0,
-    FOREIGN KEY (IdCategoria) REFERENCES Categorias(IdCategoria)
+    Stock INT NULL,
+	CONSTRAINT FK_IdCategoria FOREIGN KEY (IdCategoria) REFERENCES Categorias(IdCategoria)
 );
+
+INSERT INTO Productos (Nombre, IdCategoria, Precio, Descripcion, Stock) VALUES ('Café Americano', 1, 15.50, 'Café negro tradicional', 0);
+INSERT INTO Productos (Nombre, IdCategoria, Precio, Descripcion, Stock) VALUES ('Cafyyé ', 1, 15.50, 'Café negro', 10);
 
 CREATE TABLE Stock (
     IdStock INT PRIMARY KEY IDENTITY(1,1),
@@ -59,13 +62,27 @@ CREATE TABLE Salidas (
 );
 
 CREATE TABLE Pedidos (
-    IdPedido INT PRIMARY KEY IDENTITY(1,1),
-    IdProducto INT NOT NULL,
-    Cantidad INT NOT NULL,
-    Fecha DATETIME NOT NULL,
-    Estado VARCHAR(20) NOT NULL CHECK (Estado IN ('Pendiente', 'Completado', 'Cancelado')),
-    FOREIGN KEY (IdProducto) REFERENCES Productos(IdProducto)
+    IdPedido INT PRIMARY KEY IDENTITY(1,1), -- Identificador único del pedido
+    Fecha DATETIME NOT NULL,                -- Fecha y hora en que se realizó el pedido
+    TipoPedido VARCHAR(20) NOT NULL CHECK (TipoPedido IN ('Mesa', 'Para Llevar', 'Domicilio')), -- Tipo de pedido
+    NumeroMesa INT NULL,                    -- Número de mesa (NULL si es para llevar o domicilio)
+	TipoPago VARCHAR(20) NOT NULL CHECK (TipoPago IN ('Efectivo', 'Tarjeta', 'Mixto')),
+    Subtotal DECIMAL(10,2) NOT NULL,        -- Subtotal del pedido antes de impuestos
+    Total DECIMAL(10,2) NOT NULL,           -- Total del pedido después de impuestos
 );
+
+CREATE TABLE DetallePedidos (
+    IdDetallePedido INT PRIMARY KEY IDENTITY(1,1), -- Identificador único del detalle del pedido
+    IdPedido INT NOT NULL,                         -- Relación con el pedido principal
+    IdProducto INT NOT NULL,                       -- Relación con el producto
+    Cantidad INT NOT NULL,                         -- Cantidad de este producto en el pedido
+    PrecioUnitario DECIMAL(10,2) NOT NULL,         -- Precio unitario del producto al momento del pedido
+    Subtotal DECIMAL(10,2) NOT NULL,               -- Cantidad * PrecioUnitario
+    FOREIGN KEY (IdPedido) REFERENCES Pedidos(IdPedido), -- Relación con la tabla Pedidos
+    FOREIGN KEY (IdProducto) REFERENCES Productos(IdProducto) -- Relación con la tabla Productos
+);
+
+
 
 CREATE TABLE Reportes (
     IdReporte INT PRIMARY KEY IDENTITY(1,1),
@@ -73,3 +90,10 @@ CREATE TABLE Reportes (
     Fecha DATETIME NOT NULL,
     Contenido VARCHAR(MAX) NOT NULL
 );
+
+DROP TABLE IF EXISTS Pedidos;
+ALTER TABLE DetallePedidos DROP CONSTRAINT FK__DetallePe__IdPed__06CD04F7;
+
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME='DetallePedidos';

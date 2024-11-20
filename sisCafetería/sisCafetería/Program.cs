@@ -19,14 +19,12 @@ namespace sisCafetería
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Inicio());
 
-            
-            Inicio inicioForm = new Inicio();
             Login loginForm = new Login();
 
 
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(inicioForm);
+                Application.Run(new Inicio());
             }
         }
     }

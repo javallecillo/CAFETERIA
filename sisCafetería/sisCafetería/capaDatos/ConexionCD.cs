@@ -21,7 +21,7 @@ namespace sisCafetería.capaDatos
         }
 
         // INSERT, UPDATE, DELETE
-        public bool ejecutarComandoSinRetornoDatos(string strComando)
+        /*public bool ejecutarComandoSinRetornoDatos(string strComando)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace sisCafetería.capaDatos
 
                 return false;
             }
-        }
+        }*/
 
         //Sobrecarga
         public bool ejecutarComandoSinRetornoDatos(SqlCommand SQLComando)
@@ -57,9 +57,9 @@ namespace sisCafetería.capaDatos
                 return true;
 
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("ERROR");
+                MessageBox.Show($"Error en la ejecución del comando: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

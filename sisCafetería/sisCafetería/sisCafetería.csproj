@@ -48,14 +48,24 @@
   <ItemGroup>
     <Compile Include="capaDatos\CategoriasCD.cs" />
     <Compile Include="capaDatos\ConexionCD.cs" />
+    <Compile Include="capaDatos\IngredientesCD.cs" />
+    <Compile Include="capaDatos\ProductosCD.cs" />
     <Compile Include="capaDatos\UsuariosCD.cs" />
     <Compile Include="capaLogica\CategoriasCL.cs" />
+    <Compile Include="capaLogica\IngredientesCL.cs" />
+    <Compile Include="capaLogica\ProductosCL.cs" />
     <Compile Include="capaLogica\UsuariosCL.cs" />
     <Compile Include="capaPresentacion\Categorias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="capaPresentacion\Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="capaPresentacion\Ingredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\Ingredientes.Designer.cs">
+      <DependentUpon>Ingredientes.cs</DependentUpon>
     </Compile>
     <Compile Include="capaPresentacion\Inicio.cs">
       <SubType>Form</SubType>
@@ -75,6 +85,12 @@
     <Compile Include="capaPresentacion\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="capaPresentacion\Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="capaPresentacion\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +108,9 @@
     <EmbeddedResource Include="capaPresentacion\Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\Ingredientes.resx">
+      <DependentUpon>Ingredientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
