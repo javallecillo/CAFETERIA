@@ -104,9 +104,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.Location = new System.Drawing.Point(596, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 23);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 106;
-            this.label2.Text = "Stock:";
+            this.label2.Text = "*Stock:";
             this.label2.Visible = false;
             // 
             // dataAlmacen
@@ -280,9 +280,9 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label7.Location = new System.Drawing.Point(596, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 23);
+            this.label7.Size = new System.Drawing.Size(107, 23);
             this.label7.TabIndex = 95;
-            this.label7.Text = "Precio unit.:";
+            this.label7.Text = "*Precio unit.:";
             // 
             // label6
             // 
@@ -290,9 +290,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label6.Location = new System.Drawing.Point(596, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 23);
+            this.label6.Size = new System.Drawing.Size(133, 23);
             this.label6.TabIndex = 94;
-            this.label6.Text = "Ud. de medida:";
+            this.label6.Text = "*Ud. de medida:";
             // 
             // txtDescripcion
             // 
@@ -342,9 +342,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.Location = new System.Drawing.Point(27, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 23);
+            this.label4.Size = new System.Drawing.Size(84, 23);
             this.label4.TabIndex = 90;
-            this.label4.Text = "Nombre:";
+            this.label4.Text = "*Nombre:";
             // 
             // label3
             // 

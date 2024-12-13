@@ -114,9 +114,9 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label8.Location = new System.Drawing.Point(29, 107);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 23);
+            this.label8.Size = new System.Drawing.Size(107, 23);
             this.label8.TabIndex = 113;
-            this.label8.Text = "Precio unit.:";
+            this.label8.Text = "*Precio unit.:";
             // 
             // txtPrecioUnitario
             // 
@@ -348,9 +348,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label6.Location = new System.Drawing.Point(650, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 23);
+            this.label6.Size = new System.Drawing.Size(105, 23);
             this.label6.TabIndex = 90;
-            this.label6.Text = "Costo total:";
+            this.label6.Text = "*Costo total:";
             // 
             // label5
             // 
@@ -358,9 +358,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label5.Location = new System.Drawing.Point(650, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 23);
+            this.label5.Size = new System.Drawing.Size(79, 23);
             this.label5.TabIndex = 89;
-            this.label5.Text = "Usuario:";
+            this.label5.Text = "*Usuario:";
             // 
             // label3
             // 
@@ -378,9 +378,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.Location = new System.Drawing.Point(29, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 23);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 87;
-            this.label2.Text = "Cantidad:";
+            this.label2.Text = "*Cantidad:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -389,9 +389,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.Location = new System.Drawing.Point(29, 247);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 23);
+            this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 86;
-            this.label1.Text = "Fecha act.:";
+            this.label1.Text = "*Fecha act.:";
             // 
             // txtFecha
             // 
@@ -428,9 +428,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.Location = new System.Drawing.Point(29, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 23);
+            this.label4.Size = new System.Drawing.Size(184, 23);
             this.label4.TabIndex = 82;
-            this.label4.Text = "Producto en almacen:";
+            this.label4.Text = "*Producto en almacen:";
             // 
             // Entradas
             // 

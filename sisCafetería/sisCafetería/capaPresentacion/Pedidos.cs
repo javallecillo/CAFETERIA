@@ -318,6 +318,7 @@ namespace sisCafetería.capaPresentacion
 
             // Calcular el total
             CalcularTotal();
+            txtCantidad_TextChanged( sender, e );
 
             // Limpiar los campos para la siguiente entrada
             cbNombreProducto.SelectedIndex = -1;
@@ -402,6 +403,35 @@ namespace sisCafetería.capaPresentacion
             }
 
             return detalles;
+        }
+
+        private void txtRecibido_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // Verificar si los campos no están vacíos y tienen valores numéricos válidos
+                if (!string.IsNullOrEmpty(txtTotal.Text) && !string.IsNullOrEmpty(txtRecibido.Text))
+                {
+                    decimal total = Convert.ToDecimal(txtTotal.Text);
+                    decimal recibido = Convert.ToDecimal(txtRecibido.Text);
+
+                    // Calcular el cambio
+                    decimal cambio = recibido - total;
+
+                    // Mostrar el cambio en txtCambio
+                    txtCambio.Text = cambio.ToString("0.00");
+                }
+                else
+                {
+                    // Si alguno de los campos está vacío, limpiar el campo de cambio
+                    txtCambio.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCambio.Clear(); // Limpiar el campo en caso de error
+                MessageBox.Show("Error al calcular el cambio: " + ex.Message);
+            }
         }
     }
 }

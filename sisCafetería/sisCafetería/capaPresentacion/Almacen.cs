@@ -45,6 +45,9 @@ namespace sisCafetería.capaPresentacion
             txtStock.Clear();
             txtUnidad.Clear();
             txtBuscar.Clear();
+
+            label2.Visible = false;
+            txtStock.Visible = false;
         }
 
         private void MostrarMensaje(string mensaje)
@@ -103,6 +106,9 @@ namespace sisCafetería.capaPresentacion
                 btnEditar.Enabled = true;
                 btnEliminar.Enabled = true;
                 btnCancelar.Enabled = true;
+
+                label2.Visible = true;
+                txtStock.Visible = true;
 
                 // Asignamos valores a los TextBox correspondientes
                 txtId.Text = dataAlmacen.Rows[indice].Cells[0].Value.ToString();

@@ -31,9 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelPedidos = new System.Windows.Forms.Panel();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.btnQuitar = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.txtIdDetallePedido = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtIdPedido = new System.Windows.Forms.TextBox();
@@ -44,8 +42,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.grupoProductos = new System.Windows.Forms.GroupBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.dataPedidos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.cbNombreProducto = new System.Windows.Forms.ComboBox();
             this.btnBuscarFrm = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -54,9 +54,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtCambio = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtRecibido = new System.Windows.Forms.TextBox();
             this.grupoDatosPedido = new System.Windows.Forms.GroupBox();
             this.cbUsuario = new System.Windows.Forms.ComboBox();
             this.cbTipoPedido = new System.Windows.Forms.ComboBox();
@@ -68,6 +65,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCambio = new System.Windows.Forms.TextBox();
+            this.txtRecibido = new System.Windows.Forms.TextBox();
             this.panelPedidos.SuspendLayout();
             this.grupoProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPedidos)).BeginInit();
@@ -77,39 +77,22 @@
             // panelPedidos
             // 
             this.panelPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
-            this.panelPedidos.Controls.Add(this.txtSubTotal);
-            this.panelPedidos.Controls.Add(this.btnQuitar);
-            this.panelPedidos.Controls.Add(this.label14);
-            this.panelPedidos.Controls.Add(this.txtIdDetallePedido);
-            this.panelPedidos.Controls.Add(this.label13);
-            this.panelPedidos.Controls.Add(this.txtIdPedido);
-            this.panelPedidos.Controls.Add(this.label12);
             this.panelPedidos.Controls.Add(this.btnGuardarPedido);
             this.panelPedidos.Controls.Add(this.btnCancelarPedido);
             this.panelPedidos.Controls.Add(this.btnTomarPedido);
             this.panelPedidos.Controls.Add(this.label9);
             this.panelPedidos.Controls.Add(this.txtTotal);
             this.panelPedidos.Controls.Add(this.grupoProductos);
+            this.panelPedidos.Controls.Add(this.label11);
             this.panelPedidos.Controls.Add(this.grupoDatosPedido);
+            this.panelPedidos.Controls.Add(this.label7);
+            this.panelPedidos.Controls.Add(this.txtCambio);
+            this.panelPedidos.Controls.Add(this.txtRecibido);
             this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPedidos.Location = new System.Drawing.Point(0, 0);
             this.panelPedidos.Name = "panelPedidos";
             this.panelPedidos.Size = new System.Drawing.Size(1556, 699);
             this.panelPedidos.TabIndex = 0;
-            // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.BackColor = System.Drawing.Color.White;
-            this.txtSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubTotal.Enabled = false;
-            this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSubTotal.ForeColor = System.Drawing.Color.Black;
-            this.txtSubTotal.Location = new System.Drawing.Point(1353, 326);
-            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.ReadOnly = true;
-            this.txtSubTotal.Size = new System.Drawing.Size(99, 30);
-            this.txtSubTotal.TabIndex = 139;
             // 
             // btnQuitar
             // 
@@ -118,7 +101,7 @@
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnQuitar.ForeColor = System.Drawing.Color.White;
-            this.btnQuitar.Location = new System.Drawing.Point(1353, 370);
+            this.btnQuitar.Location = new System.Drawing.Point(1025, 226);
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(115, 36);
@@ -128,17 +111,6 @@
             this.btnQuitar.Visible = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label14.Location = new System.Drawing.Point(1286, 328);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 23);
-            this.label14.TabIndex = 138;
-            this.label14.Text = "Subtot:";
-            this.label14.Visible = false;
-            // 
             // txtIdDetallePedido
             // 
             this.txtIdDetallePedido.BackColor = System.Drawing.Color.White;
@@ -146,7 +118,7 @@
             this.txtIdDetallePedido.Enabled = false;
             this.txtIdDetallePedido.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtIdDetallePedido.ForeColor = System.Drawing.Color.Black;
-            this.txtIdDetallePedido.Location = new System.Drawing.Point(1353, 279);
+            this.txtIdDetallePedido.Location = new System.Drawing.Point(920, 231);
             this.txtIdDetallePedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdDetallePedido.Name = "txtIdDetallePedido";
             this.txtIdDetallePedido.ReadOnly = true;
@@ -158,7 +130,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label13.Location = new System.Drawing.Point(1286, 281);
+            this.label13.Location = new System.Drawing.Point(854, 233);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 23);
             this.label13.TabIndex = 136;
@@ -172,7 +144,7 @@
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtIdPedido.ForeColor = System.Drawing.Color.Black;
-            this.txtIdPedido.Location = new System.Drawing.Point(1353, 232);
+            this.txtIdPedido.Location = new System.Drawing.Point(730, 226);
             this.txtIdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdPedido.Name = "txtIdPedido";
             this.txtIdPedido.ReadOnly = true;
@@ -184,7 +156,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label12.Location = new System.Drawing.Point(1286, 234);
+            this.label12.Location = new System.Drawing.Point(660, 231);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 23);
             this.label12.TabIndex = 133;
@@ -243,11 +215,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1273, 611);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(1273, 544);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 31);
+            this.label9.Size = new System.Drawing.Size(97, 31);
             this.label9.TabIndex = 128;
-            this.label9.Text = "TOTAL:";
+            this.label9.Text = "*TOTAL:";
             // 
             // txtTotal
             // 
@@ -255,7 +228,7 @@
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTotal.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal.Location = new System.Drawing.Point(1377, 612);
+            this.txtTotal.Location = new System.Drawing.Point(1377, 545);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
@@ -265,8 +238,10 @@
             // grupoProductos
             // 
             this.grupoProductos.BackColor = System.Drawing.Color.Gainsboro;
+            this.grupoProductos.Controls.Add(this.txtSubTotal);
             this.grupoProductos.Controls.Add(this.dataPedidos);
             this.grupoProductos.Controls.Add(this.btnAgregar);
+            this.grupoProductos.Controls.Add(this.label14);
             this.grupoProductos.Controls.Add(this.cbNombreProducto);
             this.grupoProductos.Controls.Add(this.btnBuscarFrm);
             this.grupoProductos.Controls.Add(this.txtCantidad);
@@ -274,10 +249,11 @@
             this.grupoProductos.Controls.Add(this.label8);
             this.grupoProductos.Controls.Add(this.label10);
             this.grupoProductos.Controls.Add(this.label4);
-            this.grupoProductos.Controls.Add(this.label11);
-            this.grupoProductos.Controls.Add(this.txtCambio);
-            this.grupoProductos.Controls.Add(this.label7);
-            this.grupoProductos.Controls.Add(this.txtRecibido);
+            this.grupoProductos.Controls.Add(this.label12);
+            this.grupoProductos.Controls.Add(this.txtIdPedido);
+            this.grupoProductos.Controls.Add(this.label13);
+            this.grupoProductos.Controls.Add(this.txtIdDetallePedido);
+            this.grupoProductos.Controls.Add(this.btnQuitar);
             this.grupoProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grupoProductos.Location = new System.Drawing.Point(30, 232);
             this.grupoProductos.Name = "grupoProductos";
@@ -285,6 +261,20 @@
             this.grupoProductos.TabIndex = 126;
             this.grupoProductos.TabStop = false;
             this.grupoProductos.Text = "Productos a ordenar";
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.BackColor = System.Drawing.Color.White;
+            this.txtSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSubTotal.Enabled = false;
+            this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSubTotal.ForeColor = System.Drawing.Color.Black;
+            this.txtSubTotal.Location = new System.Drawing.Point(973, 47);
+            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ReadOnly = true;
+            this.txtSubTotal.Size = new System.Drawing.Size(91, 30);
+            this.txtSubTotal.TabIndex = 139;
             // 
             // dataPedidos
             // 
@@ -338,6 +328,16 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label14.Location = new System.Drawing.Point(896, 51);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 23);
+            this.label14.TabIndex = 138;
+            this.label14.Text = "*Subtot.:";
+            // 
             // cbNombreProducto
             // 
             this.cbNombreProducto.BackColor = System.Drawing.Color.White;
@@ -347,10 +347,10 @@
             this.cbNombreProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbNombreProducto.ForeColor = System.Drawing.Color.Black;
             this.cbNombreProducto.FormattingEnabled = true;
-            this.cbNombreProducto.Location = new System.Drawing.Point(113, 47);
+            this.cbNombreProducto.Location = new System.Drawing.Point(120, 47);
             this.cbNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNombreProducto.Name = "cbNombreProducto";
-            this.cbNombreProducto.Size = new System.Drawing.Size(280, 31);
+            this.cbNombreProducto.Size = new System.Drawing.Size(273, 31);
             this.cbNombreProducto.TabIndex = 125;
             this.cbNombreProducto.Tag = "";
             this.cbNombreProducto.SelectedIndexChanged += new System.EventHandler(this.cbNombreProducto_SelectedIndexChanged);
@@ -377,10 +377,10 @@
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtCantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtCantidad.Location = new System.Drawing.Point(793, 47);
+            this.txtCantidad.Location = new System.Drawing.Point(601, 47);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(99, 30);
+            this.txtCantidad.Size = new System.Drawing.Size(81, 30);
             this.txtCantidad.TabIndex = 123;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
@@ -390,7 +390,7 @@
             this.txtPrecioUnitario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPrecioUnitario.ForeColor = System.Drawing.Color.Black;
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(582, 48);
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(777, 47);
             this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioUnitario.Name = "txtPrecioUnitario";
             this.txtPrecioUnitario.ReadOnly = true;
@@ -401,11 +401,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label8.Location = new System.Drawing.Point(515, 50);
+            this.label8.Location = new System.Drawing.Point(710, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 23);
+            this.label8.Size = new System.Drawing.Size(68, 23);
             this.label8.TabIndex = 118;
-            this.label8.Text = "Precio:";
+            this.label8.Text = "*Precio:";
             // 
             // label10
             // 
@@ -413,68 +413,29 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label10.Location = new System.Drawing.Point(23, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 23);
+            this.label10.Size = new System.Drawing.Size(91, 23);
             this.label10.TabIndex = 115;
-            this.label10.Text = "Producto:";
+            this.label10.Text = "*Producto:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label4.Location = new System.Drawing.Point(704, 49);
+            this.label4.Location = new System.Drawing.Point(509, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 23);
+            this.label4.Size = new System.Drawing.Size(90, 23);
             this.label4.TabIndex = 122;
-            this.label4.Text = "Cantidad:";
+            this.label4.Text = "*Cantidad:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label11.Location = new System.Drawing.Point(939, 199);
+            this.label11.Location = new System.Drawing.Point(1275, 596);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 23);
             this.label11.TabIndex = 130;
             this.label11.Text = "Recibido:";
-            this.label11.Visible = false;
-            // 
-            // txtCambio
-            // 
-            this.txtCambio.BackColor = System.Drawing.Color.White;
-            this.txtCambio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCambio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtCambio.ForeColor = System.Drawing.Color.Black;
-            this.txtCambio.Location = new System.Drawing.Point(1037, 257);
-            this.txtCambio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCambio.Name = "txtCambio";
-            this.txtCambio.ReadOnly = true;
-            this.txtCambio.Size = new System.Drawing.Size(145, 30);
-            this.txtCambio.TabIndex = 127;
-            this.txtCambio.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label7.Location = new System.Drawing.Point(939, 259);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 23);
-            this.label7.TabIndex = 126;
-            this.label7.Text = "Cambio:";
-            this.label7.Visible = false;
-            // 
-            // txtRecibido
-            // 
-            this.txtRecibido.BackColor = System.Drawing.Color.White;
-            this.txtRecibido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRecibido.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtRecibido.ForeColor = System.Drawing.Color.Black;
-            this.txtRecibido.Location = new System.Drawing.Point(1037, 197);
-            this.txtRecibido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRecibido.Name = "txtRecibido";
-            this.txtRecibido.Size = new System.Drawing.Size(145, 30);
-            this.txtRecibido.TabIndex = 131;
-            this.txtRecibido.Visible = false;
             // 
             // grupoDatosPedido
             // 
@@ -540,7 +501,7 @@
             "Efectivo",
             "Tarjeta",
             "Transferencia"});
-            this.cbFormaPago.Location = new System.Drawing.Point(159, 109);
+            this.cbFormaPago.Location = new System.Drawing.Point(166, 109);
             this.cbFormaPago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFormaPago.Name = "cbFormaPago";
             this.cbFormaPago.Size = new System.Drawing.Size(234, 31);
@@ -574,9 +535,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label5.Location = new System.Drawing.Point(432, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 23);
+            this.label5.Size = new System.Drawing.Size(122, 23);
             this.label5.TabIndex = 120;
-            this.label5.Text = "Atendido por:";
+            this.label5.Text = "*Atendido por:";
             // 
             // label3
             // 
@@ -584,19 +545,19 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.Location = new System.Drawing.Point(432, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 23);
+            this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 118;
-            this.label3.Text = "Tipo pedido:";
+            this.label3.Text = "*Tipo pedido:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label2.Location = new System.Drawing.Point(23, 109);
+            this.label2.Location = new System.Drawing.Point(23, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 23);
+            this.label2.Size = new System.Drawing.Size(137, 23);
             this.label2.TabIndex = 116;
-            this.label2.Text = "Forma de pago:";
+            this.label2.Text = "*Forma de pago:";
             // 
             // label1
             // 
@@ -604,9 +565,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.Location = new System.Drawing.Point(23, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.Size = new System.Drawing.Size(65, 23);
             this.label1.TabIndex = 115;
-            this.label1.Text = "Fecha:";
+            this.label1.Text = "*Fecha:";
             // 
             // txtFecha
             // 
@@ -614,12 +575,48 @@
             this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFecha.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(159, 48);
+            this.txtFecha.Location = new System.Drawing.Point(166, 47);
             this.txtFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(234, 30);
             this.txtFecha.TabIndex = 115;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label7.Location = new System.Drawing.Point(1275, 639);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 23);
+            this.label7.TabIndex = 126;
+            this.label7.Text = "Cambio:";
+            // 
+            // txtCambio
+            // 
+            this.txtCambio.BackColor = System.Drawing.Color.White;
+            this.txtCambio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCambio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtCambio.ForeColor = System.Drawing.Color.Black;
+            this.txtCambio.Location = new System.Drawing.Point(1377, 637);
+            this.txtCambio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCambio.Name = "txtCambio";
+            this.txtCambio.ReadOnly = true;
+            this.txtCambio.Size = new System.Drawing.Size(145, 30);
+            this.txtCambio.TabIndex = 127;
+            // 
+            // txtRecibido
+            // 
+            this.txtRecibido.BackColor = System.Drawing.Color.White;
+            this.txtRecibido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRecibido.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtRecibido.ForeColor = System.Drawing.Color.Black;
+            this.txtRecibido.Location = new System.Drawing.Point(1377, 594);
+            this.txtRecibido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRecibido.Name = "txtRecibido";
+            this.txtRecibido.Size = new System.Drawing.Size(145, 30);
+            this.txtRecibido.TabIndex = 131;
+            this.txtRecibido.TextChanged += new System.EventHandler(this.txtRecibido_TextChanged);
             // 
             // Pedidos
             // 

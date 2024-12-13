@@ -82,9 +82,10 @@
             this.panelSalidas.Controls.Add(this.btnEliminar);
             this.panelSalidas.Controls.Add(this.btnEditar);
             this.panelSalidas.Controls.Add(this.btnAgregar);
+            this.panelSalidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSalidas.Location = new System.Drawing.Point(0, 0);
             this.panelSalidas.Name = "panelSalidas";
-            this.panelSalidas.Size = new System.Drawing.Size(1544, 685);
+            this.panelSalidas.Size = new System.Drawing.Size(1544, 697);
             this.panelSalidas.TabIndex = 0;
             // 
             // label3
@@ -93,9 +94,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.Location = new System.Drawing.Point(29, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 23);
+            this.label3.Size = new System.Drawing.Size(144, 23);
             this.label3.TabIndex = 135;
-            this.label3.Text = "Stock disponible:";
+            this.label3.Text = "*Stock disponible:";
             // 
             // txtStockDisponible
             // 
@@ -191,9 +192,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label6.Location = new System.Drawing.Point(650, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 23);
+            this.label6.Size = new System.Drawing.Size(79, 23);
             this.label6.TabIndex = 127;
-            this.label6.Text = "Usuario:";
+            this.label6.Text = "*Usuario:";
             // 
             // label5
             // 
@@ -211,9 +212,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.Location = new System.Drawing.Point(29, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 23);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 125;
-            this.label2.Text = "Cantidad:";
+            this.label2.Text = "*Cantidad:";
             // 
             // label1
             // 
@@ -221,9 +222,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.Location = new System.Drawing.Point(29, 243);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 23);
+            this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 124;
-            this.label1.Text = "Fecha act.:";
+            this.label1.Text = "*Fecha act.:";
             // 
             // txtFecha
             // 
@@ -260,9 +261,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.Location = new System.Drawing.Point(29, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 23);
+            this.label4.Size = new System.Drawing.Size(184, 23);
             this.label4.TabIndex = 120;
-            this.label4.Text = "Producto en almacen:";
+            this.label4.Text = "*Producto en almacen:";
             // 
             // dataSalidas
             // 

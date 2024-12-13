@@ -69,6 +69,12 @@ namespace sisCafetería.capaPresentacion
             {
                 dataProductos.Columns["IdProducto"].Visible = false;
             }
+
+            // Ocultar la columna "Stock"
+            if (dataProductos.Columns["Stock"] != null)
+            {
+                dataProductos.Columns["Stock"].Visible = false;
+            }
         }
 
         private ProductosCL RecuperarInformacion()

@@ -241,9 +241,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.Location = new System.Drawing.Point(31, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 23);
+            this.label4.Size = new System.Drawing.Size(84, 23);
             this.label4.TabIndex = 79;
-            this.label4.Text = "Nombre:";
+            this.label4.Text = "*Nombre:";
             // 
             // label3
             // 
@@ -272,9 +272,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.Location = new System.Drawing.Point(31, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 23);
+            this.label2.Size = new System.Drawing.Size(95, 23);
             this.label2.TabIndex = 83;
-            this.label2.Text = "Categoría:";
+            this.label2.Text = "*Categoría:";
             // 
             // label7
             // 
@@ -282,9 +282,9 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label7.Location = new System.Drawing.Point(31, 166);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 23);
+            this.label7.Size = new System.Drawing.Size(68, 23);
             this.label7.TabIndex = 85;
-            this.label7.Text = "Precio:";
+            this.label7.Text = "*Precio:";
             // 
             // txtPrecio
             // 
@@ -308,6 +308,7 @@
             this.label6.Size = new System.Drawing.Size(54, 23);
             this.label6.TabIndex = 84;
             this.label6.Text = "Stock:";
+            this.label6.Visible = false;
             // 
             // txtStock
             // 
@@ -321,6 +322,7 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(338, 30);
             this.txtStock.TabIndex = 86;
+            this.txtStock.Visible = false;
             // 
             // cbCategoria
             // 

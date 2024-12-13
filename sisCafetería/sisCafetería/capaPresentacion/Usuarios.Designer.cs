@@ -86,7 +86,7 @@
             this.dataUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -283,9 +283,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.Location = new System.Drawing.Point(31, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
+            this.label4.Size = new System.Drawing.Size(108, 23);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Contraseña:";
+            this.label4.Text = "*Contraseña:";
             // 
             // label3
             // 
@@ -293,9 +293,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.Location = new System.Drawing.Point(29, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 23);
+            this.label3.Size = new System.Drawing.Size(79, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Usuario:";
+            this.label3.Text = "*Usuario:";
             // 
             // label2
             // 
@@ -303,9 +303,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.Location = new System.Drawing.Point(543, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 23);
+            this.label2.Size = new System.Drawing.Size(45, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Rol:";
+            this.label2.Text = "*Rol:";
             // 
             // label1
             // 
