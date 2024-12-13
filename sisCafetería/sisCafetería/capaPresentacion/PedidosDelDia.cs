@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace sisCafetería.capaPresentacion
 {
-    public partial class MostrarReporte : Form
+    public partial class PedidosDelDia : Form
     {
-        public MostrarReporte()
+        public PedidosDelDia()
         {
             InitializeComponent();
         }
 
-        private void MostrarReporte_Load(object sender, EventArgs e)
+        private void PedidosDelDia_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.MostrarPedidosDelDia' Puede moverla o quitarla según sea necesario.
             this.mostrarPedidosDelDiaTableAdapter.Fill(this.dataSetPrincipal.MostrarPedidosDelDia);
+
             this.reportViewer1.RefreshReport();
         }
     }

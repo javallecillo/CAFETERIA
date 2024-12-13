@@ -335,17 +335,35 @@
     <Compile Include="capaPresentacion\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="capaPresentacion\MostrarReporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="capaPresentacion\MostrarReporte.Designer.cs">
-      <DependentUpon>MostrarReporte.cs</DependentUpon>
-    </Compile>
     <Compile Include="capaPresentacion\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="capaPresentacion\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosDelDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosDelDia.Designer.cs">
+      <DependentUpon>PedidosDelDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosDelDiaPorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosDelDiaPorUsuario.Designer.cs">
+      <DependentUpon>PedidosDelDiaPorUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosPorFechaGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosPorFechaGeneral.Designer.cs">
+      <DependentUpon>PedidosPorFechaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosPorFechaYUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capaPresentacion\PedidosPorFechaYUsuario.Designer.cs">
+      <DependentUpon>PedidosPorFechaYUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="capaPresentacion\Productos.cs">
       <SubType>Form</SubType>
@@ -409,11 +427,20 @@
     <EmbeddedResource Include="capaPresentacion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="capaPresentacion\MostrarReporte.resx">
-      <DependentUpon>MostrarReporte.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\PedidosDelDia.resx">
+      <DependentUpon>PedidosDelDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\PedidosDelDiaPorUsuario.resx">
+      <DependentUpon>PedidosDelDiaPorUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\PedidosPorFechaGeneral.resx">
+      <DependentUpon>PedidosPorFechaGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capaPresentacion\PedidosPorFechaYUsuario.resx">
+      <DependentUpon>PedidosPorFechaYUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="capaPresentacion\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -427,6 +454,10 @@
     <EmbeddedResource Include="capaPresentacion\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informe_PedidosDelDia.rdlc" />
+    <EmbeddedResource Include="Informe_PedidosDelDiaPorUsuario.rdlc" />
+    <EmbeddedResource Include="Informe_PedidosPorFechaGeneral.rdlc" />
+    <EmbeddedResource Include="Informe_PedidosPorFechaYUsuario.rdlc" />
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -435,7 +466,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventas.rdlc" />
     <None Include="DataSetPrincipal.xsc">
       <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
     </None>

@@ -34,7 +34,6 @@ namespace sisCafetería.capaPresentacion
 
             btnConsultar.Enabled = false;
             btnPDF.Enabled = false;
-            btnExcel.Enabled = false;
         }
 
         private void MostrarMensaje(string mensaje)
@@ -105,6 +104,8 @@ namespace sisCafetería.capaPresentacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            
+
             try
             {
                 // Variables para filtros
@@ -112,8 +113,9 @@ namespace sisCafetería.capaPresentacion
                 string tipoReporte = cbTipoReporte.SelectedItem?.ToString(); // "Ventas del día" o "Ventas por fecha"
                 DataSet ds;
 
+                //MessageBox.Show(idUsuario.ToString());
+
                 btnPDF.Enabled = true;
-                btnExcel.Enabled = true;
 
                 // Instancia de la capa de datos
                 PedidosCD pedidosCD = new PedidosCD();
@@ -232,7 +234,6 @@ namespace sisCafetería.capaPresentacion
                 // Deshabilitar botones si no hay valor seleccionado
                 btnConsultar.Enabled = false;
                 btnPDF.Enabled = false;
-                btnExcel.Enabled = false;
 
                 // Ocultar los controles de fecha por defecto
                 label1.Visible = false;
@@ -244,9 +245,55 @@ namespace sisCafetería.capaPresentacion
 
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            MostrarReporte mostrarReporte = new MostrarReporte();
+            PedidosDelDia pedidosDelDia = new PedidosDelDia();
+            PedidosDelDiaPorUsuario pedidosDelDiaPorUsuario = new PedidosDelDiaPorUsuario();
+            PedidosPorFechaGeneral pedidosPorFechaGeneral = new PedidosPorFechaGeneral();
+            PedidosPorFechaYUsuario pedidosPorFechaYUsuario = new PedidosPorFechaYUsuario();
 
-            mostrarReporte.ShowDialog();
+
+            // Variables para filtros
+            int idUsuario = Convert.ToInt32(cbUsuario.SelectedValue); // Asumiendo que el ComboBox tiene los IDs de usuario como valores
+            string tipoReporte = cbTipoReporte.SelectedItem?.ToString(); // "Ventas del día" o "Ventas por fecha"
+            DateTime fechaInicio = dateTimeDesde.Value;
+            DateTime fechaFin = dateTimeHasta.Value;
+            
+            //MessageBox.Show(fechaInicio.ToString());
+            //MessageBox.Show(fechaFin.ToString());
+
+            pedidosDelDiaPorUsuario.IdUsuario = idUsuario;
+            pedidosPorFechaYUsuario.IdUsuario = idUsuario;
+
+            pedidosPorFechaYUsuario.FechaInicio = fechaInicio;
+            pedidosPorFechaYUsuario.FechaFin = fechaFin;
+            pedidosPorFechaGeneral.FechaInicio = fechaInicio;
+            pedidosPorFechaGeneral.FechaFin = fechaFin;
+
+            // Selección de tipo de reporte
+            if (tipoReporte == "Ventas del día")
+            {
+                if (idUsuario > 0) // Si hay un usuario seleccionado
+                {
+                    pedidosDelDiaPorUsuario.ShowDialog();
+                }
+                else
+                {
+                    pedidosDelDia.ShowDialog();
+                }
+            } 
+            else if (tipoReporte == "Ventas por fecha")
+            {
+                if (idUsuario > 0) // Si hay un usuario seleccionado
+                {
+                    // Generar la consulta con filtro de usuario y fechas
+                    pedidosPorFechaYUsuario.ShowDialog();
+                }
+                else
+                {
+                    pedidosPorFechaGeneral.ShowDialog();
+                }
+            }
+
+
         }
     }
 }

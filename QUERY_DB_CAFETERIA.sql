@@ -1,4 +1,4 @@
-
+use db_cafeteria
 
 CREATE TABLE Categorias (
     IdCategoria INT PRIMARY KEY IDENTITY(1,1),
@@ -159,3 +159,55 @@ SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, p.TipoPedido, p.Forma
 SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, p.TipoPedido, p.FormaPago FROM Pedidos p INNER JOIN Usuarios u ON p.IdUsuario = u.IdUsuario
 
 SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, p.TipoPedido, p.FormaPago FROM Pedidos p INNER JOIN Usuarios u ON p.IdUsuario = u.IdUsuario WHERE p.IdUsuario = @IdUsuario
+
+SELECT p.Nombre AS Producto, d.PrecioUnitario AS 'Precio unitario', d.Cantidad, d.Subtotal FROM DetallePedidos d INNER JOIN Productos p ON d.IdProducto = p.IdProducto WHERE d.IdPedido = 9
+
+CREATE PROCEDURE MostrarPedidosDelDia
+AS
+BEGIN
+    SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, 
+           p.TipoPedido, p.FormaPago
+    FROM Pedidos p
+    INNER JOIN Usuarios u ON p.IdUsuario = u.IdUsuario
+    WHERE CAST(p.Fecha AS DATE) = CAST(GETDATE() AS DATE); -- Filtra pedidos del día actual
+END;
+
+CREATE PROCEDURE MostrarPedidosPorFechaYUsuario
+    @IdUsuario INT,
+    @FechaInicio DATETIME,
+    @FechaFin DATETIME
+AS
+BEGIN
+    SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, 
+           p.TipoPedido, p.FormaPago
+    FROM Pedidos p
+    INNER JOIN Usuarios u ON p.IdUsuario = u.IdUsuario
+    WHERE p.IdUsuario = @IdUsuario
+    AND CAST(p.Fecha AS DATE) BETWEEN @FechaInicio AND @FechaFin;
+END;
+
+CREATE PROCEDURE MostrarPedidosDelDiaPorUsuario
+    @IdUsuario INT
+AS
+BEGIN
+    SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, 
+           p.TipoPedido, p.FormaPago
+    FROM Pedidos p
+    INNER JOIN Usuarios u ON p.IdUsuario = u.IdUsuario
+    WHERE CAST(p.Fecha AS DATE) = CAST(GETDATE() AS DATE) -- Ventas del día actual
+    AND p.IdUsuario = @IdUsuario;
+END;
+
+CREATE PROCEDURE MostrarPedidosPorFechaGeneral
+    @FechaInicio DATETIME,
+    @FechaFin DATETIME
+AS
+BEGIN
+    SELECT p.IdPedido, p.Fecha, p.Total, u.Usuario AS Usuario, 
+           p.TipoPedido, p.FormaPago
+    FROM Pedidos p
+    INNER JOIN Usuarios u ON p.IdUsuario = u.IdUsuario
+    WHERE CAST(p.Fecha AS DATE) BETWEEN @FechaInicio AND @FechaFin;
+END;
+
+
