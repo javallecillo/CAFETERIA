@@ -181,7 +181,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 114);
+            this.label2.Location = new System.Drawing.Point(33, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 23);
             this.label2.TabIndex = 6;
@@ -242,6 +242,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 500);

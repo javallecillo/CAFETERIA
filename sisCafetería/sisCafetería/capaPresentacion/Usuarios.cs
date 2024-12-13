@@ -133,7 +133,7 @@ namespace sisCafetería.capaPresentacion
                 DataSet resultados = oUsuariosCD.BuscarUsuariosPorNombre(usuarioABuscar);
 
                 dataUsuarios.DataSource = resultados.Tables[0];
-
+                
                 dataUsuarios.Columns[0].HeaderText = "ID";
                 dataUsuarios.Columns[1].HeaderText = "Usuario";
                 dataUsuarios.Columns[2].HeaderText = "Contraseña";
@@ -152,11 +152,17 @@ namespace sisCafetería.capaPresentacion
         public void LlenarData()
         {
             dataUsuarios.DataSource = oUsuariosCD.MostrarUsuarios().Tables[0];
-
+            
             dataUsuarios.Columns[0].HeaderText = "ID";
             dataUsuarios.Columns[1].HeaderText = "Usuario";
             dataUsuarios.Columns[2].HeaderText = "Contraseña";
             dataUsuarios.Columns[3].HeaderText = "Rol";
+
+            // Ocultar la columna "IdAlmacen"
+            if (dataUsuarios.Columns["IdUsuario"] != null)
+            {
+                dataUsuarios.Columns["IdUsuario"].Visible = false;
+            }
         }
 
         private UsuariosCL RecuperarInformacion()
@@ -199,6 +205,16 @@ namespace sisCafetería.capaPresentacion
             txtUsuario.Enabled = true;
             txtContrasenia.Enabled = true;
             cmbRol.Enabled = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

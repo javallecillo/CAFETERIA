@@ -43,18 +43,18 @@
             this.panelInicio.Controls.Add(this.label1);
             this.panelInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInicio.Location = new System.Drawing.Point(0, 0);
-            this.panelInicio.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(1167, 606);
+            this.panelInicio.Size = new System.Drawing.Size(1544, 697);
             this.panelInicio.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::sisCafetería.Properties.Resources.LOGO_Galerias_Cafe_TAZABK;
-            this.pictureBox1.Location = new System.Drawing.Point(784, 205);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(1175, 315);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 390);
+            this.pictureBox1.Size = new System.Drawing.Size(369, 371);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -63,22 +63,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(29, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(918, 200);
+            this.label1.Size = new System.Drawing.Size(1101, 250);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 606);
+            this.ClientSize = new System.Drawing.Size(1544, 697);
             this.Controls.Add(this.panelInicio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Inicio";
             this.Text = "Inicio";
             this.panelInicio.ResumeLayout(false);

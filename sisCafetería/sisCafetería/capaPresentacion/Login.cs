@@ -136,13 +136,20 @@ namespace sisCafetería.capaPresentacion
                     lblMsg.Text = "";
                     imgAdvertencia.Visible = false;
 
+                    // Guardar el usuario actual
+                    UsuariosCL.UsuarioActual = new UsuariosCL
+                    {
+                        Usuario = usuario // Guarda el nombre de usuario que inició sesión
+                    };
+
+                    // Cerrar el formulario de login
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 else
                 {
                     lblMsg.Text = "Usuario o contraseña incorrectos.";
-                    imgAdvertencia.Visible= true;
+                    imgAdvertencia.Visible = true;
                 }
             }
             catch (Exception ex)

@@ -7,9 +7,9 @@ using sisCafetería.capaDatos;
 
 namespace sisCafetería.capaLogica
 {
-    internal class IngredientesCL
+    internal class AlmacenCL
     {
-        public int IdIngrediente { get; set; }
+        public int IdAlmacen { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public decimal PrecioUnitario { get; set; }

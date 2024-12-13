@@ -53,6 +53,12 @@ namespace sisCafetería.capaPresentacion
             dataCategorias.Columns[0].HeaderText = "ID";
             dataCategorias.Columns[1].HeaderText = "Nombre";
             dataCategorias.Columns[2].HeaderText = "Descripción";
+
+            // Ocultar la columna "IdAlmacen"
+            if (dataCategorias.Columns["IdCategoria"] != null)
+            {
+                dataCategorias.Columns["IdCategoria"].Visible = false;
+            }
         }
 
         private CategoriasCL RecuperarInformacion()

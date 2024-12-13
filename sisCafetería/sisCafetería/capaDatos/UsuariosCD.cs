@@ -86,5 +86,35 @@ namespace sisCafetería.capaDatos
             sentencia.Parameters.AddWithValue("@Usuario", "%" + usuario + "%");
             return conexion.EjecutarSentencia(sentencia);
         }
+
+        public int ObtenerIdUsuarioPorNombre(string nombreUsuario)
+        {
+            try
+            {
+                using (SqlConnection conn = conexion.EstablecerConexion())
+                {
+                    string query = "SELECT IdUsuario FROM Usuarios WHERE Usuario = @Usuario";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Usuario", nombreUsuario);
+
+                    conn.Open();
+                    object result = cmd.ExecuteScalar(); // Obtiene el IdUsuario
+
+                    if (result != null)
+                    {
+                        return Convert.ToInt32(result); // Retorna el IdUsuario
+                    }
+                    else
+                    {
+                        return -1; // Retorna -1 si no se encuentra el usuario
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error al obtener el IdUsuario: " + ex.Message);
+                return -1; // Retorna -1 si hubo un error en la consulta
+            }
+        }
     }
 }

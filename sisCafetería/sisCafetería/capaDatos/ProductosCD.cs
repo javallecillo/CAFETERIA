@@ -70,5 +70,26 @@ namespace sisCafetería.capaDatos
             return conexion.EjecutarSentencia(sentencia);
         }
 
+        // Mostrar todos los productos
+        public DataSet MostrarProductosBuscar()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT IdProducto, Nombre, Precio, Descripcion FROM Productos");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
+        public DataSet BuscarProductoPorNombre_MostrarSoloNombre(string nombre)
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT IdProducto, Nombre, Precio, Descripcion FROM Productos WHERE Nombre LIKE @Nombre");
+            sentencia.Parameters.AddWithValue("@Nombre", "%" + nombre + "%");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
+        // Mostrar todos los productos
+        public DataSet MostrarProductosParaComboBox()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM Productos");
+            return conexion.EjecutarSentencia(sentencia);
+        }
+
     }
 }

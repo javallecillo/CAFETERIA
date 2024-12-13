@@ -13,13 +13,13 @@ using sisCafetería.capaLogica;
 
 namespace sisCafetería.capaPresentacion
 {
-    public partial class Ingredientes : Form
+    public partial class Almacen : Form
     {
-        IngredientesCD oIngredientesCD;
+        AlmacenCD oAlmacenCD;
 
-        public Ingredientes()
+        public Almacen()
         {
-            oIngredientesCD = new IngredientesCD();
+            oAlmacenCD = new AlmacenCD();
             InitializeComponent();
             LlenarData();
             LimpiarTextBox();
@@ -54,18 +54,24 @@ namespace sisCafetería.capaPresentacion
 
         public void LlenarData()
         {
-            dataIngredientes.DataSource = oIngredientesCD.MostrarIngredientes().Tables[0];
+            dataAlmacen.DataSource = oAlmacenCD.MostrarAlmacen().Tables[0];
 
-            dataIngredientes.Columns[0].HeaderText = "ID";
-            dataIngredientes.Columns[1].HeaderText = "Nombre";
-            dataIngredientes.Columns[2].HeaderText = "Descripción";
-            dataIngredientes.Columns[3].HeaderText = "Precio unitario";
-            dataIngredientes.Columns[4].HeaderText = "Stock";
+            dataAlmacen.Columns[0].HeaderText = "ID";
+            dataAlmacen.Columns[1].HeaderText = "Nombre";
+            dataAlmacen.Columns[2].HeaderText = "Descripción";
+            dataAlmacen.Columns[3].HeaderText = "Precio unitario";
+            dataAlmacen.Columns[4].HeaderText = "Stock";
+
+            // Ocultar la columna "IdAlmacen"
+            if (dataAlmacen.Columns["IdAlmacen"] != null)
+            {
+                dataAlmacen.Columns["IdAlmacen"].Visible = false;
+            }
         }
 
-        private IngredientesCL RecuperarInformacion()
+        private AlmacenCL RecuperarInformacion()
         {
-            IngredientesCL oIngredientesCL = new IngredientesCL();
+            AlmacenCL oAlmacenCL = new AlmacenCL();
 
             int id = 0, stock = 0;
             decimal precioUnitario = 0;
@@ -74,14 +80,14 @@ namespace sisCafetería.capaPresentacion
             int.TryParse(txtStock.Text, out stock);
             decimal.TryParse(txtPrecio.Text, out precioUnitario);
 
-            oIngredientesCL.IdIngrediente = id;
-            oIngredientesCL.Nombre = txtNombre.Text;
-            oIngredientesCL.Descripcion = txtDescripcion.Text;
-            oIngredientesCL.PrecioUnitario = precioUnitario;
-            oIngredientesCL.Stock = stock;
-            oIngredientesCL.UnidadMedida = txtUnidad.Text;
+            oAlmacenCL.IdAlmacen = id;
+            oAlmacenCL.Nombre = txtNombre.Text;
+            oAlmacenCL.Descripcion = txtDescripcion.Text;
+            oAlmacenCL.PrecioUnitario = precioUnitario;
+            oAlmacenCL.Stock = stock;
+            oAlmacenCL.UnidadMedida = txtUnidad.Text;
 
-            return oIngredientesCL;
+            return oAlmacenCL;
         }
 
         private void Seleccionar(object sender, DataGridViewCellMouseEventArgs e)
@@ -89,9 +95,9 @@ namespace sisCafetería.capaPresentacion
             int indice = e.RowIndex;
 
             // Asegúrate de que la fila seleccionada sea válida
-            if (indice >= 0 && indice < dataIngredientes.Rows.Count)
+            if (indice >= 0 && indice < dataAlmacen.Rows.Count)
             {
-                dataIngredientes.ClearSelection();
+                dataAlmacen.ClearSelection();
 
                 btnAgregar.Enabled = false;
                 btnEditar.Enabled = true;
@@ -99,13 +105,13 @@ namespace sisCafetería.capaPresentacion
                 btnCancelar.Enabled = true;
 
                 // Asignamos valores a los TextBox correspondientes
-                txtId.Text = dataIngredientes.Rows[indice].Cells[0].Value.ToString();
-                txtNombre.Text = dataIngredientes.Rows[indice].Cells[1].Value.ToString();
-                txtDescripcion.Text = dataIngredientes.Rows[indice].Cells[2].Value.ToString();
-                txtPrecio.Text = dataIngredientes.Rows[indice].Cells[3].Value.ToString();
+                txtId.Text = dataAlmacen.Rows[indice].Cells[0].Value.ToString();
+                txtNombre.Text = dataAlmacen.Rows[indice].Cells[1].Value.ToString();
+                txtDescripcion.Text = dataAlmacen.Rows[indice].Cells[2].Value.ToString();
+                txtPrecio.Text = dataAlmacen.Rows[indice].Cells[3].Value.ToString();
 
                 // Separar el campo Stock/Unidad
-                string stockUnidad = dataIngredientes.Rows[indice].Cells[4].Value.ToString(); // "50 unidades"
+                string stockUnidad = dataAlmacen.Rows[indice].Cells[4].Value.ToString(); // "50 unidades"
 
                 // Separar el número (stock) y la unidad
                 string[] partes = stockUnidad.Split(' ');  // Divide en el espacio
@@ -148,12 +154,12 @@ namespace sisCafetería.capaPresentacion
             }
             else if (btnAgregar.Text == "Guardar")
             {
-                oIngredientesCD.Agregar(RecuperarInformacion());
+                oAlmacenCD.Agregar(RecuperarInformacion());
                 LlenarData();
 
                 LimpiarTextBox();
 
-                MostrarMensaje("Ingrediente agregado con éxito.");
+                MostrarMensaje("Agregado con éxito.");
 
                 btnAgregar.Text = "Agregar";
                 btnCancelar.Enabled = false;
@@ -172,11 +178,11 @@ namespace sisCafetería.capaPresentacion
             }
             else if (btnEditar.Text == "Guardar")
             {
-                oIngredientesCD.Editar(RecuperarInformacion());
+                oAlmacenCD.Editar(RecuperarInformacion());
                 LlenarData(); // Llamar para volver a llenar los datos con el formato combinado
 
                 LimpiarTextBox();
-                MostrarMensaje("El ingrediente ha sido actualizado.");
+                MostrarMensaje("El almacen ha sido actualizado.");
 
                 btnEditar.Text = "Editar";
             }
@@ -196,9 +202,9 @@ namespace sisCafetería.capaPresentacion
 
             if (result == DialogResult.Yes)
             {
-                oIngredientesCD.Eliminar(RecuperarInformacion());
+                oAlmacenCD.Eliminar(RecuperarInformacion());
                 LimpiarTextBox();
-                MostrarMensaje("El ingrediente ha sido eliminado.");
+                MostrarMensaje("El registro ha sido eliminado.");
                 LlenarData();
             }
             else
@@ -209,19 +215,19 @@ namespace sisCafetería.capaPresentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string ingredienteABuscar = txtBuscar.Text.Trim();
+            string almacenABuscar = txtBuscar.Text.Trim();
 
-            if (!string.IsNullOrEmpty(ingredienteABuscar))
+            if (!string.IsNullOrEmpty(almacenABuscar))
             {
-                DataSet resultados = oIngredientesCD.BuscarIngredientesPorNombre(ingredienteABuscar);
+                DataSet resultados = oAlmacenCD.BuscarAlmacenPorNombre(almacenABuscar);
 
-                dataIngredientes.DataSource = resultados.Tables[0];
+                dataAlmacen.DataSource = resultados.Tables[0];
 
-                dataIngredientes.Columns[0].HeaderText = "ID";
-                dataIngredientes.Columns[1].HeaderText = "Nombre";
-                dataIngredientes.Columns[2].HeaderText = "Descripción";
-                dataIngredientes.Columns[3].HeaderText = "Precio unitario";
-                dataIngredientes.Columns[4].HeaderText = "Stock";
+                dataAlmacen.Columns[0].HeaderText = "ID";
+                dataAlmacen.Columns[1].HeaderText = "Nombre";
+                dataAlmacen.Columns[2].HeaderText = "Descripción";
+                dataAlmacen.Columns[3].HeaderText = "Precio unitario";
+                dataAlmacen.Columns[4].HeaderText = "Stock";
 
                 LimpiarTextBox();
                 btnCancelar.Enabled = true;
@@ -231,6 +237,11 @@ namespace sisCafetería.capaPresentacion
             {
                 MessageBox.Show("Por favor, ingrese un nombre para buscar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void dataIngredientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

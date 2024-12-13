@@ -63,7 +63,12 @@ namespace sisCafetería.capaPresentacion
             dataProductos.Columns[3].HeaderText = "Precio";
             dataProductos.Columns[4].HeaderText = "Descripción";
             dataProductos.Columns[5].HeaderText = "Stock";
-            
+
+            // Ocultar la columna "IdAlmacen"
+            if (dataProductos.Columns["IdProducto"] != null)
+            {
+                dataProductos.Columns["IdProducto"].Visible = false;
+            }
         }
 
         private ProductosCL RecuperarInformacion()
@@ -230,6 +235,13 @@ namespace sisCafetería.capaPresentacion
             cbCategoria.DataSource = objCategorias.MostrarCategorias().Tables[0];
             cbCategoria.DisplayMember = "Nombre";
             cbCategoria.ValueMember = "IdCategoria";
+
+            LimpiarTextBox();
+        }
+
+        private void panelProductos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

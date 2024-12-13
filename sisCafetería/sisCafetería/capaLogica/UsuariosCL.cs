@@ -17,6 +17,9 @@ namespace sisCafetería.capaLogica
         public string Contrasenia { get; set; }
         public string Rol { get; set; }
 
+        // Propiedad estática para guardar la sesión del usuario
+        public static UsuariosCL UsuarioActual { get; set; }
+
         public bool ValidarUsuario(string usuario, string contrasenia)
         {
             return usuariosCD.ValidarUsuario(usuario, contrasenia);

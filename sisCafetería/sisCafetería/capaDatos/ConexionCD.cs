@@ -88,5 +88,32 @@ namespace sisCafetería.capaDatos
                 return DS;
             }
         }
+
+        // Método para abrir la conexión
+        public SqlConnection AbrirConexion()
+        {
+            // Verificar si la conexión no ha sido inicializada
+            if (Conexion == null)
+            {
+                Conexion = new SqlConnection(CadenaConexion);
+            }
+
+            // Abrir la conexión si está cerrada
+            if (Conexion.State == System.Data.ConnectionState.Closed)
+            {
+                Conexion.Open();
+            }
+
+            return Conexion;
+        }
+
+        // Método para cerrar la conexión
+        public void CerrarConexion()
+        {
+            if (Conexion.State == System.Data.ConnectionState.Open)
+            {
+                Conexion.Close();
+            }
+        }
     }
 }
